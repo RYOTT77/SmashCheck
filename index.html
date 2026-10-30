@@ -200,7 +200,7 @@ button {
 
 .hidden { display: none; }
 
-/* SUPPORT SECTION */
+/* OPTIONAL SUPPORT SECTION */
 
 .support-section {
   margin-top: 42px;
@@ -220,6 +220,13 @@ button {
   color: #625e58;
   line-height: 1.5;
   margin: 0 0 22px;
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
 }
 
 .tier {
@@ -246,6 +253,12 @@ button {
   font-size: 1.05rem;
   line-height: 1.2;
   margin: 8px 0;
+}
+
+.tier-price {
+  font-size: 1.7rem;
+  font-weight: 1000;
+  margin: 8px 0 14px;
 }
 
 .tier-link {
@@ -279,8 +292,9 @@ button {
 @media (max-width: 420px) {
   .header-bar { gap: 8px; }
   .support-button { padding: 10px; font-size: .8rem; }
+  .tier-grid { gap: 10px; }
   .tier { padding: 11px; }
-  .tier-icon { min-height: 90px; font-size: 4rem; }
+  .tier-icon { min-height: 90px; font-size: 3.5rem; }
 }
 
 @media print {
@@ -309,12 +323,9 @@ button {
     Smash<span>Check</span>
   </header>
 
-  <a
-    class="support-button"
-    href="https://donate.stripe.com/bJe5kE2c3cco29i6bfgjC00"
-    target="_blank"
-    rel="noopener noreferrer"
-  >♥ Support</a>
+  <a class="support-button" href="#support">
+    ♥ Tip (Optional)
+  </a>
 </div>
 
 <section class="card">
@@ -395,34 +406,70 @@ Create acknowledgment
   </div>
 </section>
 
+<!-- OPTIONAL TIPPING TIERS -->
+
 <section id="support" class="support-section">
 
 <h2 class="support-heading">Support SmashCheck ♥</h2>
 
 <p class="support-intro">
 SmashCheck is free to use. If you enjoy the project,
-help keep it alive with a voluntary contribution.
-Every bit helps.
+you can leave an optional tip to help keep it going.
+No pressure — the app is always free.
 </p>
 
-<div class="tier" style="max-width:360px;margin:0 auto;">
-  <div class="tier-icon" aria-hidden="true">♥</div>
-  <h3>Support the project</h3>
-  <p class="support-intro">
-    Choose your contribution securely on Stripe.
-  </p>
-  <a
-    class="tier-link"
-    href="https://donate.stripe.com/bJe5kE2c3cco29i6bfgjC00"
-    target="_blank"
-    rel="noopener noreferrer"
-  >Contribute with Stripe</a>
+<div class="tier-grid">
+
+  <article class="tier">
+    <div class="tier-icon" aria-hidden="true">🎩</div>
+    <h3>Gentleman</h3>
+    <p class="tier-price">$2</p>
+    <a class="tier-link"
+       href="YOUR_GENTLEMAN_STRIPE_LINK"
+       target="_blank" rel="noopener noreferrer">
+      Leave a $2 Tip
+    </a>
+  </article>
+
+  <article class="tier">
+    <div class="tier-icon" aria-hidden="true">😎</div>
+    <h3>Tool</h3>
+    <p class="tier-price">$5</p>
+    <a class="tier-link"
+       href="YOUR_TOOL_STRIPE_LINK"
+       target="_blank" rel="noopener noreferrer">
+      Leave a $5 Tip
+    </a>
+  </article>
+
+  <article class="tier">
+    <div class="tier-icon" aria-hidden="true">🐴</div>
+    <h3>Rising Stud</h3>
+    <p class="tier-price">$20</p>
+    <a class="tier-link"
+       href="YOUR_RISING_STUD_STRIPE_LINK"
+       target="_blank" rel="noopener noreferrer">
+      Leave a $20 Tip
+    </a>
+  </article>
+
+  <article class="tier">
+    <div class="tier-icon" aria-hidden="true">🦍</div>
+    <h3>Big "D" Energy</h3>
+    <p class="tier-price">$50</p>
+    <a class="tier-link"
+       href="YOUR_BIG_D_ENERGY_STRIPE_LINK"
+       target="_blank" rel="noopener noreferrer">
+      Leave a $50 Tip
+    </a>
+  </article>
+
 </div>
 
 <p class="support-disclaimer">
-Contributions are voluntary and are not charitable donations
-or tax-deductible gifts. SmashCheck remains free to use.
-Payments are securely processed by Stripe.
+All contributions are completely optional. SmashCheck remains
+free to use. Contributions are not charitable donations or
+tax-deductible gifts. Payments are processed by Stripe.
 </p>
 
 <a class="back-top" href="#">↑ Back to SmashCheck</a>
