@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e73528">
+<title>Support SmashCheck</title>
+
+<style>
+:root {
+  --red: #e73528;
+  --dark-red: #b82118;
+  --black: #111;
+  --bg: #f6f4ef;
+  --border: #dedad2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--black);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+main {
+  width: min(900px, 100%);
+  margin: auto;
+  padding: 35px 20px 55px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 35px;
+  font-size: clamp(2rem, 7vw, 3rem);
+  font-weight: 1000;
+  letter-spacing: -3px;
+}
+
+header span {
+  color: var(--red);
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 13px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin: 0 0 15px;
+}
+
+.hero h1 span {
+  color: var(--red);
+}
+
+.hero p {
+  max-width: 540px;
+  margin: auto;
+  color: #625e58;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.optional {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background: #fbe2df;
+  color: var(--dark-red);
+  font-size: .8rem;
+  font-weight: 850;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.tier {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 5px 15px #11108;
+}
+
+.tier-icon {
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0ee;
+  border-radius: 14px;
+  margin-bottom: 17px;
+  font-size: 3.5rem;
+}
+
+.tier h2 {
+  margin: 0 0 7px;
+  font-size: 1.2rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 1000;
+  margin: 8px 0 17px;
+}
+
+.tier a {
+  display: block;
+  padding: 14px 10px;
+  background: var(--red);
+  color: white;
+  border-radius: 11px;
+  text-decoration: none;
+  font-weight: 900;
+  transition: background .2s, transform .2s;
+}
+
+.tier a:hover {
+  background: var(--dark-red);
+  transform: translateY(-2px);
+}
+
+.no-pressure {
+  text-align: center;
+  margin: 32px auto;
+  max-width: 550px;
+  color: #625e58;
+  line-height: 1.6;
+}
+
+.back-button {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 14px 23px;
+  border: 2px solid var(--black);
+  border-radius: 12px;
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.back-button:hover {
+  background: var(--black);
+  color: white;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: #77716b;
+  font-size: .78rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 580px) {
+  main {
+    padding: 25px 14px 40px;
+  }
+
+  .tiers {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .tier {
+    padding: 17px;
+  }
+
+  .tier-icon {
+    height: 85px;
+  }
+}
+</style>
+</head>
+
+<body>
+<main>
+
+<header>
+  <img
+    class="logo"
+    src="ChatGPT%20Image%20Oct%2030,%202026,%2005_34_32%20PM.jpg"
+    alt="SmashCheck logo"
+  >
+  Smash<span>Check</span>
+</header>
+
+<section class="hero">
+  <h1>Keep the <span>good vibes</span> going.</h1>
+
+  <p>
+    SmashCheck is free to use. If you enjoy the project
+    and want to help support its development, you can
+    leave an optional tip below.
+  </p>
+
+  <div class="optional">100% optional · No pressure</div>
+</section>
+
+<section class="tiers">
+
+  <article class="tier">
+    <div class="tier-icon">🎩</div>
+    <h2>Gentleman</h2>
+    <div class="price">$2</div>
+    <a href="YOUR_GENTLEMAN_STRIPE_LINK"
+       target="_blank"
+       rel="noopener noreferrer">
+      Leave a $2 Tip
+    </a>
+  </article>
+
+  <article class="tier">
+    <div class="tier-icon">😎</div>
+    <h2>Tool</h2>
+    <div class="price">$5</div>
+    <a href="YOUR_TOOL_STRIPE_LINK"
+       target="_blank"
+       rel="noopener noreferrer">
+      Leave a $5 Tip
+    </a>
+  </article>
+
+  <article class="tier">
+    <div class="tier-icon">🐴</div>
+    <h2>Rising Stud</h2>
+    <div class="price">$20</div>
+    <a href="YOUR_RISING_STUD_STRIPE_LINK"
+       target="_blank"
+       rel="noopener noreferrer">
+      Leave a $20 Tip
+    </a>
+  </article>
+
+  <article class="tier">
+    <div class="tier-icon">🦍</div>
+    <h2>Big "D" Energy</h2>
+    <div class="price">$50</div>
+    <a href="YOUR_BIG_D_ENERGY_STRIPE_LINK"
+       target="_blank"
+       rel="noopener noreferrer">
+      Leave a $50 Tip
+    </a>
+  </article>
+
+</section>
+
+<p class="no-pressure">
+  Not tipping? No problem at all. SmashCheck remains
+  completely free, and your experience is exactly the same.
+</p>
+
+<a class="back-button" href="index.html">
+  ← Back to SmashCheck
+</a>
+
+<footer>
+  Voluntary contributions support the SmashCheck project.
+  They are not charitable donations or tax-deductible gifts.
+  Payments are processed securely by Stripe.
+  <br><br>
+  © 2026 SmashCheck
+</footer>
+
+</main>
+</body>
+</html>
