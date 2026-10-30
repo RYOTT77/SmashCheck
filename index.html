@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,10 @@
 <meta name="theme-color" content="#e73528">
 <meta name="description" content="SmashCheck — mutual, informed, ongoing consent.">
 <title>SmashCheck</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -16,14 +21,19 @@
   --border: #d8d4cc;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--black);
-  font-family: system-ui, -apple-system, sans-serif;
 }
 
 main {
@@ -45,7 +55,7 @@ header {
   align-items: center;
   gap: 10px;
   font-size: clamp(2rem, 8vw, 2.8rem);
-  font-weight: 1000;
+  font-weight: 700;
   letter-spacing: -3px;
   white-space: nowrap;
 }
@@ -58,14 +68,16 @@ header {
   flex: 0 0 auto;
 }
 
-header span { color: var(--red); }
+header span {
+  color: var(--red);
+}
 
 .support-button {
   display: inline-block;
   background: var(--red);
   color: white;
   text-decoration: none;
-  font-weight: 850;
+  font-weight: 700;
   font-size: .9rem;
   padding: 12px 16px;
   border-radius: 12px;
@@ -73,7 +85,9 @@ header span { color: var(--red); }
   white-space: nowrap;
 }
 
-.support-button:hover { background: var(--dark-red); }
+.support-button:hover {
+  background: var(--dark-red);
+}
 
 .card {
   background: white;
@@ -84,7 +98,7 @@ header span { color: var(--red); }
 
 .question {
   font-size: clamp(1.5rem, 6vw, 2rem);
-  font-weight: 850;
+  font-weight: 700;
   line-height: 1.25;
   letter-spacing: -1px;
   margin: 0 0 22px;
@@ -92,7 +106,7 @@ header span { color: var(--red); }
 
 label {
   display: block;
-  font-weight: 800;
+  font-weight: 700;
   margin: 22px 0 8px;
 }
 
@@ -140,7 +154,7 @@ canvas {
 
 button {
   font: inherit;
-  font-weight: 850;
+  font-weight: 700;
   cursor: pointer;
   border: 0;
   border-radius: 12px;
@@ -164,7 +178,9 @@ button {
   box-shadow: 4px 4px 0 var(--black);
 }
 
-.submit-button:hover { background: var(--dark-red); }
+.submit-button:hover {
+  background: var(--dark-red);
+}
 
 .note {
   color: #625e58;
@@ -175,7 +191,7 @@ button {
 
 .error {
   color: #a12736;
-  font-weight: 750;
+  font-weight: 700;
   margin-top: 12px;
 }
 
@@ -198,7 +214,9 @@ button {
   margin-top: 10px;
 }
 
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
 /* OPTIONAL SUPPORT SECTION */
 
@@ -211,7 +229,7 @@ button {
 
 .support-heading {
   font-size: 2rem;
-  font-weight: 1000;
+  font-weight: 700;
   letter-spacing: -1.5px;
   margin: 0 0 8px;
 }
@@ -233,20 +251,8 @@ button {
   background: white;
   border: 1px solid var(--border);
   border-radius: 18px;
-  padding: 16px;
+  padding: 18px 12px;
   text-align: center;
-  overflow: hidden;
-}
-
-.tier-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 115px;
-  font-size: 5rem;
-  background: #fff0ee;
-  border-radius: 14px;
-  margin-bottom: 13px;
 }
 
 .tier h3 {
@@ -257,22 +263,27 @@ button {
 
 .tier-price {
   font-size: 1.7rem;
-  font-weight: 1000;
-  margin: 8px 0 14px;
+  font-weight: 700;
+  margin: 8px 0;
 }
 
 .tier-link {
   display: block;
   width: 100%;
+  max-width: 360px;
+  margin: 22px auto 0;
   background: var(--red);
   color: white;
   text-decoration: none;
-  font-weight: 850;
-  padding: 12px 8px;
-  border-radius: 10px;
+  text-align: center;
+  font-weight: 700;
+  padding: 15px 18px;
+  border-radius: 12px;
 }
 
-.tier-link:hover { background: var(--dark-red); }
+.tier-link:hover {
+  background: var(--dark-red);
+}
 
 .support-disclaimer {
   margin-top: 20px;
@@ -286,26 +297,51 @@ button {
   text-align: center;
   margin-top: 22px;
   color: var(--black);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 @media (max-width: 420px) {
-  .header-bar { gap: 8px; }
-  .support-button { padding: 10px; font-size: .8rem; }
-  .tier-grid { gap: 10px; }
-  .tier { padding: 11px; }
-  .tier-icon { min-height: 90px; font-size: 3.5rem; }
+  .header-bar {
+    gap: 8px;
+  }
+
+  .support-button {
+    padding: 10px;
+    font-size: .8rem;
+  }
+
+  .tier-grid {
+    gap: 10px;
+  }
+
+  .tier {
+    padding: 14px 8px;
+  }
 }
 
 @media print {
-  body { background: white; }
-  main { padding: 0; }
+  body {
+    background: white;
+  }
+
+  main {
+    padding: 0;
+  }
+
   .header-bar,
   form,
   .no-print,
-  .support-section { display: none !important; }
-  .card { border: 0; }
-  .result { display: block !important; }
+  .support-section {
+    display: none !important;
+  }
+
+  .card {
+    border: 0;
+  }
+
+  .result {
+    display: block !important;
+  }
 }
 </style>
 </head>
@@ -323,8 +359,13 @@ button {
     Smash<span>Check</span>
   </header>
 
-  <a class="support-button" href="#support">
-    ♥ Tip (Optional)
+  <a
+    class="support-button"
+    href="https://donate.stripe.com/bJe5kE2c3cco29i6bfgjC00"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ♥ Support
   </a>
 </div>
 
@@ -406,7 +447,7 @@ Create acknowledgment
   </div>
 </section>
 
-<!-- OPTIONAL TIPPING TIERS -->
+<!-- OPTIONAL SUPPORT TIERS -->
 
 <section id="support" class="support-section">
 
@@ -421,50 +462,35 @@ No pressure — the app is always free.
 <div class="tier-grid">
 
   <article class="tier">
-    <div class="tier-icon" aria-hidden="true">🎩</div>
     <h3>Gentleman</h3>
     <p class="tier-price">$2</p>
-    <a class="tier-link"
-       href="YOUR_GENTLEMAN_STRIPE_LINK"
-       target="_blank" rel="noopener noreferrer">
-      Leave a $2 Tip
-    </a>
   </article>
 
   <article class="tier">
-    <div class="tier-icon" aria-hidden="true">😎</div>
     <h3>Tool</h3>
     <p class="tier-price">$5</p>
-    <a class="tier-link"
-       href="YOUR_TOOL_STRIPE_LINK"
-       target="_blank" rel="noopener noreferrer">
-      Leave a $5 Tip
-    </a>
   </article>
 
   <article class="tier">
-    <div class="tier-icon" aria-hidden="true">🐴</div>
     <h3>Rising Stud</h3>
     <p class="tier-price">$20</p>
-    <a class="tier-link"
-       href="YOUR_RISING_STUD_STRIPE_LINK"
-       target="_blank" rel="noopener noreferrer">
-      Leave a $20 Tip
-    </a>
   </article>
 
   <article class="tier">
-    <div class="tier-icon" aria-hidden="true">🦍</div>
     <h3>Big "D" Energy</h3>
     <p class="tier-price">$50</p>
-    <a class="tier-link"
-       href="YOUR_BIG_D_ENERGY_STRIPE_LINK"
-       target="_blank" rel="noopener noreferrer">
-      Leave a $50 Tip
-    </a>
   </article>
 
 </div>
+
+<a
+  class="tier-link"
+  href="https://donate.stripe.com/bJe5kE2c3cco29i6bfgjC00"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  ♥ Support SmashCheck with Stripe
+</a>
 
 <p class="support-disclaimer">
 All contributions are completely optional. SmashCheck remains
